@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Text/Image Modifier",
+  "version": "1.0",
+  "description": "Modify text or images on a specific website",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_title": "Modify Content",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "24": "icon24.png",
+    "32": "icon32.png"
+  }
+}
